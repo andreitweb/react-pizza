@@ -5,6 +5,8 @@ import {
   Route
 } from "react-router-dom";
 
+import './styles/app.scss';
+
 import {routes} from "./routes";
 import {Header, Main} from './containers';
 
