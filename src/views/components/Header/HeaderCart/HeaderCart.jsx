@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const HeaderCart = () => {
+const HeaderCart = ( {cost, count} ) => {
 	return (
 		<div className="header__cart">
 			<Link to="/cart" className="button button--cart">
-				<span>520 ₽</span>
+				<span>{cost} ₽</span>
 				<div className="button__delimiter"></div>
 				<svg
 					width="18"
@@ -36,10 +37,15 @@ const HeaderCart = () => {
 						stroke-linejoin="round"
 					/>
 				</svg>
-				<span>3</span>
+				<span>{count}</span>
 			</Link>
 		</div>
 	);
+}
+
+HeaderCart.propTypes = {
+	cost: PropTypes.number,
+	count: PropTypes.number
 }
 
 export default HeaderCart;

@@ -1,4 +1,8 @@
 @import "logo";
 @import "button";
-@import "categories";
-@import "sort";
+
+@import "./catalog/control-panel";
+@import "./catalog/categories";
+@import "./catalog/sort";
+@import "./catalog/title";
+@import "./catalog/catalog-list";

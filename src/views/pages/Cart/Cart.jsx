@@ -2,7 +2,9 @@ import React from 'react';
 
 const Cart = () => {
   return (
-    'Корзина'
+    <div className="container">
+      Корзина
+    </div>
   );
 }
 
