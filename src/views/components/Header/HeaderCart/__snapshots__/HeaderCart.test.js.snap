@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Cart test should render 1`] = `
+exports[`Header Cart test should render with no crushing 1`] = `
 <div
   className="header__cart"
 >

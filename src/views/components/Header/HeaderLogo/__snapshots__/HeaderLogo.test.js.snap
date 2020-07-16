@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with no crushing 1`] = `
+<div
+  className="logo"
+>
+  <img
+    alt="Pizza logo"
+    src="pizza-logo.svg"
+    width="38"
+  />
+  <div>
+    <h1>
+      React Pizza
+    </h1>
+    <p>
+      самая вкусная пицца во вселенной
+    </p>
+  </div>
+</div>
+`;

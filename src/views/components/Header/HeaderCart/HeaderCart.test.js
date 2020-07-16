@@ -14,7 +14,7 @@ describe('Header Cart test', () => {
 		};
 	});
 
-	it('should render', function () {
+	it('should render with no crushing', function () {
 		const component = renderer.create(
 			<MemoryRouter>
 				<HeaderCart {...props}/>
@@ -25,14 +25,27 @@ describe('Header Cart test', () => {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('HeaderCart should contains numbers from properties', () => {
+	it('HeaderCart should contains cost from properties', () => {
 		const component = renderer.create(
 			<MemoryRouter>
 				<HeaderCart {...props}/>
 			</MemoryRouter>
 		);
-		console.log(component.root.findByProps(props.count));
-		expect(component.root.findByProps(props.count));
+		const spanCost = component.root.findAllByType('span')[0];
+
+		expect(spanCost.children[0] + ' ₽').toBe(props.cost + ' ₽');
+	});
+
+	it('HeaderCart should contains count from properties', () => {
+		const component = renderer.create(
+			<MemoryRouter>
+				<HeaderCart {...props}/>
+			</MemoryRouter>
+		);
+		const spanCount = component.root.findAllByType('span')[1];
+
+		//expect count props
+		expect(Number(spanCount.children[0])).toBe(props.count);
 	});
 
 });
