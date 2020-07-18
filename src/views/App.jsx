@@ -17,7 +17,7 @@ const App = () => {
       <Main>
         <Switch>
           {routes.map( props => (
-            <Route {...props}/>
+            <Route key={props.path} {...props}/>
           ))}
         </Switch>
       </Main>
